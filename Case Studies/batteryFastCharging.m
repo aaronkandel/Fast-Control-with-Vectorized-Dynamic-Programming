@@ -14,6 +14,9 @@ clc
 clear
 close all
 
+% Add algorithm function folder:
+cd ..
+addpath Algorithm
 
 %% Initialize Battery Parameters:
 
