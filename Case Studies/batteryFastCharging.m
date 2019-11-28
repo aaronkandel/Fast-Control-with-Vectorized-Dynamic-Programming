@@ -14,10 +14,6 @@ clc
 clear
 close all
 
-% Add algorithm function folder:
-cd ..
-addpath Algorithm
-
 %% Initialize Battery Parameters:
 
 % Load and Fit OCV Data:
@@ -136,6 +132,11 @@ bestU(:,end) = bu;
 
 nx = length(x1mesh)*length(x2mesh);
 nu = length(umesh);
+
+% Add algorithm function folder:
+cd ..
+addpath Algorithm
+
 bestU = DP_Loop(N, nx, nu, newXind, nextCost, tCost, cost2GoNow);
 
 %% Simulate Results:
