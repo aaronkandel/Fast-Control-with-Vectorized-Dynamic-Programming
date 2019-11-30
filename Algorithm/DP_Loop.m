@@ -3,9 +3,7 @@ function bestU = DP_Loop(N, nx, nu, newXind, nextCost, tCost, cost2GoNow)
 %{
 This function takes transition costs and initial cost-to-go/next-cost at 
 the final timestep and, through backwards recursion, computes the control 
-input indices which maximize the finite time value function. I augment the
-"Iteration" in "Value Iteration" with a vectorized format to accelerate
-computation significantly. 
+input indices which maximize the finite time value function.
 %}
 
 for k = N:-1:1 % Start from end, move backwards:
